@@ -1,0 +1,15 @@
+{
+	"name": "df-staynest",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5dc58a7f-7c71-49b8-bcf8-eab42721e6a7",
+		"tenantId": "7c5bf5e7-dd35-41f6-ba22-b7aff7172f0d"
+	}
+}

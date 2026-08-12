@@ -1,0 +1,28 @@
+{
+	"name": "trigger_ignore",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_copy_a_file",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"pl_filename": "hotels.csv"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2026-08-12T09:10:00",
+				"endTime": "2026-08-13T03:33:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

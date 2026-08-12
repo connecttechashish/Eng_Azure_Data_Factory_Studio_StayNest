@@ -5,12 +5,20 @@
 			"referenceName": "ls_staynest",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"ds_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "hotels.csv",
+				"fileName": {
+					"value": "@dataset().ds_filename",
+					"type": "Expression"
+				},
 				"folderPath": "raw",
 				"container": "staynest"
 			},

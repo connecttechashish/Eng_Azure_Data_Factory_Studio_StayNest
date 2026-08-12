@@ -50,7 +50,13 @@
 				"inputs": [
 					{
 						"referenceName": "ds_source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_filename": {
+								"value": "@pipeline().parameters.pl_filename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -88,8 +94,19 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"pl_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
